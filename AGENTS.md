@@ -17,8 +17,15 @@
 - Do not regenerate lockfiles unless dependencies change.
 - Do not refactor unrelated code.
 
+## Environment
+- This project uses Python 3.11 or newer.
+- Install development dependencies with `python -m pip install -e '.[dev]'` when pytest is unavailable.
+- Do not spend time inventing alternate test runners when the declared dev dependencies can be installed.
+
 ## Validation
 - Run the narrowest relevant tests or checks first.
+- Preferred focused test command: `python -m pytest <relevant-test-file-or-node> -q`.
+- For the cart example, start with `python -m pytest tests/test_cart.py -q`.
 - Expand validation only when failures or cross-cutting changes justify it.
 - Report what was checked and any remaining uncertainty.
 
